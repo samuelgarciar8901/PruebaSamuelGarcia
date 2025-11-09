@@ -35,15 +35,60 @@ Antes de ejecutar el proyecto, hay que  tener instalado:
 
 5. **SQL Server Management Studio (SSMS)** 
 
-La base de datos se  llama DbDoubleVPartners
+1. Abrir SQL Server Management Studio.
+2. Crear la base de datos `DbDoubleVPartners`.
+3. Crear la tabla `Tickets` ejecutando el script SQL incluido.
 
-Abrir SQL Server Management Studio.
+Cadena de conexión en `backend/appsettings.json`:
 
-Conectarse a:
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=DbDoubleVPartners;Trusted_Connection=True;TrustServerCertificate=True;"
+}
 
-(localdb)\MSSQLLocalDB
+4. Ejecutar Backend (API)
+cd backend
+dotnet restore
+dotnet build
+dotnet run
+
+5. Ejecutar Frontend (Angular)
+
+cd frontend
+npm install
+ng serve --o
+
+6. Cómo se Usa la Aplicación
+
+En la página principal se muestra una grilla con los tickets.
+
+Se Puede:
+
+Crear un nuevo ticket (botón "Agregar")
+
+Editar tickets existentes 
+
+Eliminar tickets
+
+La grilla soporta paginación.
+
+7. Tecnologías Utilizadas
+
+ASP.NET Core Web API
+
+Entity Framework Core
+
+Angular Standalone Components
+
+TailwindCSS
+
+SweetAlert2
+
+SQL Server / LocalDB
+
+8. Autor
+
+Samuel García
+Repositorio: https://github.com/samuelgarciar8901/PruebaSamuelGarcia
 
 
-Crear la base de datos manualmente.
-
-Ejecutar el script SQL incluido en el proyecto (el archivo .sql con la creación de la tabla Tickets).
