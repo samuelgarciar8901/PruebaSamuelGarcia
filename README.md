@@ -35,13 +35,13 @@ Antes de ejecutar el proyecto, hay que  tener instalado:
 
 5. **SQL Server Management Studio (SSMS)** 
 
-1. Abrir SQL Server Management Studio.
-2. Crear la base de datos `DbDoubleVPartners`.
-3. Crear la tabla `Tickets` ejecutando el script SQL incluido.
+5.1 . Abrir SQL Server Management Studio.
+5.2. Crear la base de datos `DbDoubleVPartners`.
+5.3. Crear la tabla `Tickets` ejecutando el script SQL incluido.
 
 Cadena de conexión en `backend/appsettings.json`:
 
-```json
+json
 "ConnectionStrings": {
   "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=DbDoubleVPartners;Trusted_Connection=True;TrustServerCertificate=True;"
 }
